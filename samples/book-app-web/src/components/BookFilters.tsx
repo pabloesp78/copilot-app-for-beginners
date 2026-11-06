@@ -23,7 +23,7 @@ export function BookFilters({
   return (
     <section className="filters" aria-label="Book filters">
       <label>
-        Search
+        <span className="filters__label">Search books</span>
         <input
           type="search"
           value={searchTerm}
@@ -33,7 +33,7 @@ export function BookFilters({
       </label>
 
       <label>
-        Genre
+        <span className="filters__label">Filter by genre</span>
         <select value={selectedGenre} onChange={(event) => onGenreChange(event.target.value)}>
           <option value="all">All genres</option>
           {genres.map((genre) => (
@@ -45,7 +45,7 @@ export function BookFilters({
       </label>
 
       <label>
-        Status
+        <span className="filters__label">Reading status</span>
         <select
           value={readingStatus}
           onChange={(event) => onReadingStatusChange(event.target.value as ReadingStatus)}
